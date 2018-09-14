@@ -25,7 +25,6 @@
 /* Begin PBXFileReference section */
 		ED9122A0214C4FD400C98DC6 /* SDLTutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLTutorial; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		ED9122AB214C63C100C98DC6 /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +41,6 @@
 		ED912297214C4FD400C98DC6 = {
 			isa = PBXGroup;
 			children = (
-				ED9122AB214C63C100C98DC6 /* grass.png */,
 				ED9122A2214C4FD400C98DC6 /* SDLTutorial */,
 				ED9122A1214C4FD400C98DC6 /* Products */,
 			);
