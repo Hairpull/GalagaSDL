@@ -4,8 +4,12 @@
    <Group
       location = "container:"
       name = "New Group">
+   </Group>
+   <Group
+      location = "container:"
+      name = "New Group 1">
       <FileRef
-         location = "self:SDLTutorial.xcodeproj">
+         location = "container:">
       </FileRef>
    </Group>
 </Workspace>

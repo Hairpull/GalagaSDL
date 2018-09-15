@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122A3214C4FD400C98DC6 /* main.cpp */; };
+		ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B1214CE72F00C98DC6 /* Graphics.cpp */; };
+		ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B5214CEF2200C98DC6 /* GameManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		ED9122A0214C4FD400C98DC6 /* SDLTutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLTutorial; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ED9122AF214CE5F600C98DC6 /* Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = SDLTutorial/SDLTutorial/Graphics.h; sourceTree = "<group>"; };
+		ED9122B1214CE72F00C98DC6 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Graphics.cpp; path = SDLTutorial/SDLTutorial/Graphics.cpp; sourceTree = "<group>"; };
+		ED9122B4214CEE7200C98DC6 /* GameManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = SDLTutorial/SDLTutorial/GameManager.h; sourceTree = "<group>"; };
+		ED9122B5214CEF2200C98DC6 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameManager.cpp; path = SDLTutorial/SDLTutorial/GameManager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,8 @@
 		ED912297214C4FD400C98DC6 = {
 			isa = PBXGroup;
 			children = (
+				ED9122B0214CE70C00C98DC6 /* Source Files */,
+				ED9122AE214CE5D000C98DC6 /* Header Files */,
 				ED9122A2214C4FD400C98DC6 /* SDLTutorial */,
 				ED9122A1214C4FD400C98DC6 /* Products */,
 			);
@@ -60,6 +68,26 @@
 				ED9122A3214C4FD400C98DC6 /* main.cpp */,
 			);
 			path = SDLTutorial;
+			sourceTree = "<group>";
+		};
+		ED9122AE214CE5D000C98DC6 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED9122AF214CE5F600C98DC6 /* Graphics.h */,
+				ED9122B4214CEE7200C98DC6 /* GameManager.h */,
+			);
+			name = "Header Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		ED9122B0214CE70C00C98DC6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED9122B1214CE72F00C98DC6 /* Graphics.cpp */,
+				ED9122B5214CEF2200C98DC6 /* GameManager.cpp */,
+			);
+			name = "Source Files";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */,
+				ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */,
 				ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +247,7 @@
 		ED9122A8214C4FD400C98DC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEVELOPMENT_TEAM = H47Z36Q7TF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(USER_LIBRARY_DIR)/Frameworks",
@@ -234,7 +264,7 @@
 		ED9122A9214C4FD400C98DC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEVELOPMENT_TEAM = H47Z36Q7TF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(USER_LIBRARY_DIR)/Frameworks",

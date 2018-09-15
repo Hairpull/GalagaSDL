@@ -1,11 +1,14 @@
 
-#include <iostream>
-#include "SDL2/SDL.h"
+#include "GameManager.h"
 
-int main() {
+int main(int argc, char* argv[]) {
 
-		// testing 1 2 3
+	GameManager* game = GameManager::Instance();
 	
+	game->Run();
+	
+	GameManager::Release();
+	game = NULL;
 	
     return 0;
 }
