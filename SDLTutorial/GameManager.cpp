@@ -24,17 +24,25 @@ GameManager::GameManager() {
 	
 	if(!Graphics::Initialized())
 	   mQuit = true;
+	
+	mTimer = Timer::Instance();
 }
 
 GameManager::~GameManager() {
 	
 	Graphics::Release();
 	mGraphics = NULL;
+	
+	
+	Timer::Release();
+	mTimer = NULL;
 }
 
 void GameManager::Run() {
 	
 	while(!mQuit) {
+		
+		mTimer->Update();
 		
 		while(SDL_PollEvent(&mEvents) != 0) {
 			
@@ -43,7 +51,17 @@ void GameManager::Run() {
 				mQuit = true;
 			}
 			
-			mGraphics ->Render();
 		}
+		if(mTimer->DeltaTime() >= (1.0f / FRAME_RATE)) {
+			
+			printf("Delta Time: %f\n", mTimer->DeltaTime());
+			
+			mGraphics->Render();
+			
+			mTimer->Reset();
+
+		}
+		
+
 	}
 }

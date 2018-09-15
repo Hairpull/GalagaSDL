@@ -3,6 +3,7 @@
 
 
 #include "Graphics.h"
+#include "Timer.h"
 
 
 
@@ -13,8 +14,14 @@ private:
 	
 	static GameManager* sInstance;
 	
+	const int FRAME_RATE = 60;
+	
 	bool mQuit;
 	Graphics* mGraphics;
+	
+	
+	Timer* mTimer;
+	
 	
 	SDL_Event mEvents;
 	
