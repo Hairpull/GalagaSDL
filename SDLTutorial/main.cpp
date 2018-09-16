@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
 	GameManager::Release();
 	game = NULL;
 	
-		// testing
+		// testing 1 2 3
 	
     return 0;
 }
