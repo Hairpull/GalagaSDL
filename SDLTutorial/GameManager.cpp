@@ -28,12 +28,9 @@ GameManager::GameManager() {
 	mTimer = Timer::Instance();
 	
 	
-	mParent = new GameEntity(100.0f, 400.0f);
-	mChild = new GameEntity(100.0f, 500.0f);
-	
-		//  printf("Child local pos: (%f,%f)\n", mChild->Pos(GameEntity::world).x, mChild->Pos(GameEntity::world).y);
-	
-	mChild->Parent(mParent);
+	std::string path = SDL_GetBasePath();
+	path.append("SpriteSheet.png");
+	mTex = new Texture(path);
 	
 
 }
@@ -47,9 +44,10 @@ GameManager::~GameManager() {
 	Timer::Release();
 	mTimer = NULL;
 	
+	delete mTex;
+	mTex = NULL;
 	
-	delete mParent;
-	delete mChild;
+
 }
 
 void GameManager::Run() {
@@ -67,13 +65,12 @@ void GameManager::Run() {
 			
 		}
 		if(mTimer->DeltaTime() >= (1.0f / FRAME_RATE)) {
-			
-			mParent->Rotation(mParent->Rotation(GameEntity::local) + 0.1f);
-			
-			printf("Parent rotation: %f\n", mParent->Rotation(GameEntity::local));
-			printf("Child local pos: (%f,%f)\n", mChild->Pos(GameEntity::world).x, mChild->Pos(GameEntity::world).y);
 
 			
+			mGraphics->ClearBackBuffer();
+			
+			mTex->Render();
+
 			mGraphics->Render();
 			
 			mTimer->Reset();

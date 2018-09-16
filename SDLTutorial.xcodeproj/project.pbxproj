@@ -16,6 +16,7 @@
 		ED9122C8214CFBFD00C98DC6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9122C4214CFBFD00C98DC6 /* SDL2.framework */; };
 		ED9122CB214DCE6800C98DC6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122CA214DCE6800C98DC6 /* Timer.cpp */; };
 		ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */; };
+		ED9122D4214DE30A00C98DC6 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D3214DE30A00C98DC6 /* Texture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		ED9122CC214DD2EB00C98DC6 /* MathHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathHelper.h; path = SDLTutorial/SDLTutorial/MathHelper.h; sourceTree = "<group>"; };
 		ED9122CE214DD5AE00C98DC6 /* GameEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameEntity.h; path = SDLTutorial/SDLTutorial/GameEntity.h; sourceTree = "<group>"; };
 		ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEntity.cpp; path = SDLTutorial/SDLTutorial/GameEntity.cpp; sourceTree = "<group>"; };
+		ED9122D2214DE28400C98DC6 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = SDLTutorial/SDLTutorial/Texture.h; sourceTree = "<group>"; };
+		ED9122D3214DE30A00C98DC6 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = SDLTutorial/SDLTutorial/Texture.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				ED9122CE214DD5AE00C98DC6 /* GameEntity.h */,
+				ED9122D2214DE28400C98DC6 /* Texture.h */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */,
+				ED9122D3214DE30A00C98DC6 /* Texture.cpp */,
 			);
 			name = Entites;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */,
 				ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */,
 				ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */,
+				ED9122D4214DE30A00C98DC6 /* Texture.cpp in Sources */,
 				ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */,
 				ED9122CB214DCE6800C98DC6 /* Timer.cpp in Sources */,
 			);

@@ -1,10 +1,8 @@
 #ifndef GameManager_h
 #define GameManager_h
 
-
-#include "Graphics.h"
+#include "Texture.h"
 #include "Timer.h"
-#include "GameEntity.h"
 
 
 
@@ -26,10 +24,9 @@ private:
 	
 	SDL_Event mEvents;
 	
+	Texture* mTex;
 	
 	
-	GameEntity* mParent;
-	GameEntity* mChild;
 	
 public:
 	
