@@ -10,5 +10,7 @@ int main(int argc, char* argv[]) {
 	GameManager::Release();
 	game = NULL;
 	
+		// testing
+	
     return 0;
 }
