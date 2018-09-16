@@ -25,13 +25,14 @@ GameManager::GameManager() {
 	if(!Graphics::Initialized())
 	   mQuit = true;
 	
+	mAssetMgr = AssetManager::Instance();
+	
 	mTimer = Timer::Instance();
 	
 	
-	std::string path = SDL_GetBasePath();
-	path.append("SpriteSheet.png");
-	mTex = new Texture(path);
+	mTex = new Texture("SpriteSheet.png");
 	
+	Texture* tex2 = new Texture("SpriteSheet.png");
 
 }
 
@@ -40,12 +41,16 @@ GameManager::~GameManager() {
 	Graphics::Release();
 	mGraphics = NULL;
 	
+	AssetManager::Release();
+	mAssetMgr = NULL;
 	
 	Timer::Release();
 	mTimer = NULL;
 	
 	delete mTex;
 	mTex = NULL;
+	
+
 	
 
 }

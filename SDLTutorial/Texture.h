@@ -1,7 +1,7 @@
 #ifndef Texture_h
 #define Texture_h
 #include "GameEntity.h"
-#include "Graphics.h"
+#include "AssetManager.h"
 
 
 
@@ -13,9 +13,12 @@ private:
 	
 	Graphics* mGraphics;
 	
+	int mWidth;
+	int mHeight;
+	
 public:
 	
-	Texture(std::string path);
+	Texture(std::string filename);
 	~Texture();
 	
 	virtual void Render();

@@ -1,19 +1,20 @@
 #include "Texture.h"
 
 
-Texture::Texture(std::string path) {
+Texture::Texture(std::string filename) {
 	
 	mGraphics = Graphics::Instance();
 	
-	mTex = mGraphics->LoadTexture(path);
+	mTex = AssetManager::Instance()->GetTexture(filename);
 	
+	
+	SDL_QueryTexture(mTex, NULL, NULL, &mWidth, &mHeight);
 
 }
 
 
 Texture::~Texture() {
 	
-	SDL_DestroyTexture(mTex);
 	mTex = NULL;
 	mGraphics = NULL;
 }

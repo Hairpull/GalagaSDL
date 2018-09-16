@@ -17,6 +17,7 @@
 		ED9122CB214DCE6800C98DC6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122CA214DCE6800C98DC6 /* Timer.cpp */; };
 		ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */; };
 		ED9122D4214DE30A00C98DC6 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D3214DE30A00C98DC6 /* Texture.cpp */; };
+		ED9122D7214EF08300C98DC6 /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D6214EF08300C98DC6 /* AssetManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,8 @@
 		ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEntity.cpp; path = SDLTutorial/SDLTutorial/GameEntity.cpp; sourceTree = "<group>"; };
 		ED9122D2214DE28400C98DC6 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = SDLTutorial/SDLTutorial/Texture.h; sourceTree = "<group>"; };
 		ED9122D3214DE30A00C98DC6 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = SDLTutorial/SDLTutorial/Texture.cpp; sourceTree = "<group>"; };
+		ED9122D5214EEFD600C98DC6 /* AssetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AssetManager.h; path = SDLTutorial/SDLTutorial/AssetManager.h; sourceTree = "<group>"; };
+		ED9122D6214EF08300C98DC6 /* AssetManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AssetManager.cpp; path = SDLTutorial/SDLTutorial/AssetManager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 				ED9122B4214CEE7200C98DC6 /* GameManager.h */,
 				ED9122C9214DCDB800C98DC6 /* Timer.h */,
 				ED9122CC214DD2EB00C98DC6 /* MathHelper.h */,
+				ED9122D5214EEFD600C98DC6 /* AssetManager.h */,
 			);
 			name = "Header Files";
 			path = ..;
@@ -113,6 +117,7 @@
 				ED9122B1214CE72F00C98DC6 /* Graphics.cpp */,
 				ED9122B5214CEF2200C98DC6 /* GameManager.cpp */,
 				ED9122CA214DCE6800C98DC6 /* Timer.cpp */,
+				ED9122D6214EF08300C98DC6 /* AssetManager.cpp */,
 			);
 			name = "Source Files";
 			path = ..;
@@ -205,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9122D7214EF08300C98DC6 /* AssetManager.cpp in Sources */,
 				ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */,
 				ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */,
 				ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */,
