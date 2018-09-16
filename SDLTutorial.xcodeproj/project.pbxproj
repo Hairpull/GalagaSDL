@@ -15,6 +15,7 @@
 		ED9122C7214CFBFD00C98DC6 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9122C3214CFBFD00C98DC6 /* SDL2_ttf.framework */; };
 		ED9122C8214CFBFD00C98DC6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9122C4214CFBFD00C98DC6 /* SDL2.framework */; };
 		ED9122CB214DCE6800C98DC6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122CA214DCE6800C98DC6 /* Timer.cpp */; };
+		ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,9 @@
 		ED9122C4214CFBFD00C98DC6 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		ED9122C9214DCDB800C98DC6 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = SDLTutorial/SDLTutorial/Timer.h; sourceTree = "<group>"; };
 		ED9122CA214DCE6800C98DC6 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = SDLTutorial/SDLTutorial/Timer.cpp; sourceTree = "<group>"; };
+		ED9122CC214DD2EB00C98DC6 /* MathHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathHelper.h; path = SDLTutorial/SDLTutorial/MathHelper.h; sourceTree = "<group>"; };
+		ED9122CE214DD5AE00C98DC6 /* GameEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameEntity.h; path = SDLTutorial/SDLTutorial/GameEntity.h; sourceTree = "<group>"; };
+		ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEntity.cpp; path = SDLTutorial/SDLTutorial/GameEntity.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +66,8 @@
 		ED912297214C4FD400C98DC6 = {
 			isa = PBXGroup;
 			children = (
-				ED9122B0214CE70C00C98DC6 /* Source Files */,
 				ED9122AE214CE5D000C98DC6 /* Header Files */,
+				ED9122B0214CE70C00C98DC6 /* Source Files */,
 				ED9122A2214C4FD400C98DC6 /* SDLTutorial */,
 				ED9122A1214C4FD400C98DC6 /* Products */,
 				ED9122C0214CFBFD00C98DC6 /* Frameworks */,
@@ -89,9 +93,11 @@
 		ED9122AE214CE5D000C98DC6 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED9122CD214DD59700C98DC6 /* Entities */,
 				ED9122AF214CE5F600C98DC6 /* Graphics.h */,
 				ED9122B4214CEE7200C98DC6 /* GameManager.h */,
 				ED9122C9214DCDB800C98DC6 /* Timer.h */,
+				ED9122CC214DD2EB00C98DC6 /* MathHelper.h */,
 			);
 			name = "Header Files";
 			path = ..;
@@ -100,6 +106,7 @@
 		ED9122B0214CE70C00C98DC6 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED9122CF214DD6F500C98DC6 /* Entites */,
 				ED9122B1214CE72F00C98DC6 /* Graphics.cpp */,
 				ED9122B5214CEF2200C98DC6 /* GameManager.cpp */,
 				ED9122CA214DCE6800C98DC6 /* Timer.cpp */,
@@ -117,6 +124,22 @@
 				ED9122C4214CFBFD00C98DC6 /* SDL2.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED9122CD214DD59700C98DC6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ED9122CE214DD5AE00C98DC6 /* GameEntity.h */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		ED9122CF214DD6F500C98DC6 /* Entites */ = {
+			isa = PBXGroup;
+			children = (
+				ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */,
+			);
+			name = Entites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +202,7 @@
 			files = (
 				ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */,
 				ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */,
+				ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */,
 				ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */,
 				ED9122CB214DCE6800C98DC6 /* Timer.cpp in Sources */,
 			);

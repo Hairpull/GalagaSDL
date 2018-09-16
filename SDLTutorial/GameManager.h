@@ -4,6 +4,7 @@
 
 #include "Graphics.h"
 #include "Timer.h"
+#include "GameEntity.h"
 
 
 
@@ -24,6 +25,11 @@ private:
 	
 	
 	SDL_Event mEvents;
+	
+	
+	
+	GameEntity* mParent;
+	GameEntity* mChild;
 	
 public:
 	
