@@ -38,7 +38,7 @@ SDL_Texture* AssetManager::GetTexture(std::string filename) {
 	
 	if(mTextures[fullpath] ==  nullptr)
 		mTextures[fullpath] = Graphics::Instance()->LoadTexture(fullpath);
-	
+   	
 	return mTextures[fullpath];
 
 }

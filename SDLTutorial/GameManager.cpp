@@ -30,10 +30,8 @@ GameManager::GameManager() {
 	mTimer = Timer::Instance();
 	
 	
-	mTex = new Texture("SpriteSheet.png");
-	
-	Texture* tex2 = new Texture("SpriteSheet.png");
-
+	mTex = new Texture("SpriteSheet.png", 182, 54, 20, 20);
+	mTex->Pos(Vector2(Graphics::SCREEN_WIDTH * 0.5f, Graphics::SCREEN_HEIGHT * 0.5f));
 }
 
 GameManager::~GameManager() {

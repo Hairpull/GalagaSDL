@@ -39,7 +39,7 @@ public:
 	
 	void ClearBackBuffer();
 	
-	void DrawTexture(SDL_Texture* tex);
+	void DrawTexture(SDL_Texture* tex, SDL_Rect* clip = NULL, SDL_Rect* rend = NULL);
 	
 	
 	void Render();
