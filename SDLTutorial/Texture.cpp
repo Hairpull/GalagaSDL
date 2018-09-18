@@ -67,8 +67,15 @@ void Texture::Render() {
 	
 	
 	Vector2 pos = Pos(world);
-	mRenderRect.x = (int)(pos.x - mWidth * 0.5f);
-	mRenderRect.y = (int)(pos.y - mHeight * 0.5f);
+	Vector2 scale = Scale(world);
 	
-	mGraphics->DrawTexture(mTex, (mClipped)? &mClipRect : NULL, &mRenderRect);
+	
+	mRenderRect.x = (int)(pos.x - mWidth * scale.x * 0.5f);
+	mRenderRect.y = (int)(pos.y - mHeight * scale.y * 0.5f);
+	mRenderRect.w = (int)(mWidth * scale.x);
+	mRenderRect.h = (int)(mHeight * scale.y);
+	
+	
+	
+	mGraphics->DrawTexture(mTex, (mClipped)? &mClipRect : NULL, &mRenderRect, Rotation(world));
 }
