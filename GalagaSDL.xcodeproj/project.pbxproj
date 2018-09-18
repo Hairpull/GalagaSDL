@@ -36,31 +36,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED10193321519899000F6EDA /* StartScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StartScreen.h; path = GalagaSDL/GalagaSDL/StartScreen.h; sourceTree = "<group>"; };
 		ED9122A0214C4FD400C98DC6 /* GalagaSDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GalagaSDL; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		ED9122AF214CE5F600C98DC6 /* Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = SDLTutorial/SDLTutorial/Graphics.h; sourceTree = "<group>"; };
-		ED9122B1214CE72F00C98DC6 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Graphics.cpp; path = SDLTutorial/SDLTutorial/Graphics.cpp; sourceTree = "<group>"; };
-		ED9122B4214CEE7200C98DC6 /* GameManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = SDLTutorial/SDLTutorial/GameManager.h; sourceTree = "<group>"; };
-		ED9122B5214CEF2200C98DC6 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameManager.cpp; path = SDLTutorial/SDLTutorial/GameManager.cpp; sourceTree = "<group>"; };
+		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/hairpull/Documents/GalagaSDL/GalagaSDL/main.cpp; sourceTree = "<absolute>"; };
+		ED9122AF214CE5F600C98DC6 /* Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = GalagaSDL/GalagaSDL/Graphics.h; sourceTree = "<group>"; };
+		ED9122B1214CE72F00C98DC6 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Graphics.cpp; path = GalagaSDL/GalagaSDL/Graphics.cpp; sourceTree = "<group>"; };
+		ED9122B4214CEE7200C98DC6 /* GameManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = GalagaSDL/GalagaSDL/GameManager.h; sourceTree = "<group>"; };
+		ED9122B5214CEF2200C98DC6 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameManager.cpp; path = GalagaSDL/GalagaSDL/GameManager.cpp; sourceTree = "<group>"; };
 		ED9122C1214CFBFD00C98DC6 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
 		ED9122C2214CFBFD00C98DC6 /* SDL2_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_mixer.framework; path = ../../../../Library/Frameworks/SDL2_mixer.framework; sourceTree = "<group>"; };
 		ED9122C3214CFBFD00C98DC6 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		ED9122C4214CFBFD00C98DC6 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
-		ED9122C9214DCDB800C98DC6 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = SDLTutorial/SDLTutorial/Timer.h; sourceTree = "<group>"; };
-		ED9122CA214DCE6800C98DC6 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = SDLTutorial/SDLTutorial/Timer.cpp; sourceTree = "<group>"; };
-		ED9122CC214DD2EB00C98DC6 /* MathHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathHelper.h; path = SDLTutorial/SDLTutorial/MathHelper.h; sourceTree = "<group>"; };
-		ED9122CE214DD5AE00C98DC6 /* GameEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameEntity.h; path = SDLTutorial/SDLTutorial/GameEntity.h; sourceTree = "<group>"; };
-		ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEntity.cpp; path = SDLTutorial/SDLTutorial/GameEntity.cpp; sourceTree = "<group>"; };
-		ED9122D2214DE28400C98DC6 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = SDLTutorial/SDLTutorial/Texture.h; sourceTree = "<group>"; };
-		ED9122D3214DE30A00C98DC6 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = SDLTutorial/SDLTutorial/Texture.cpp; sourceTree = "<group>"; };
-		ED9122D5214EEFD600C98DC6 /* AssetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AssetManager.h; path = SDLTutorial/SDLTutorial/AssetManager.h; sourceTree = "<group>"; };
-		ED9122D6214EF08300C98DC6 /* AssetManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AssetManager.cpp; path = SDLTutorial/SDLTutorial/AssetManager.cpp; sourceTree = "<group>"; };
-		ED9122D82150777600C98DC6 /* InputManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputManager.h; path = SDLTutorial/SDLTutorial/InputManager.h; sourceTree = "<group>"; };
-		ED9122D92150782C00C98DC6 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InputManager.cpp; path = SDLTutorial/SDLTutorial/InputManager.cpp; sourceTree = "<group>"; };
-		ED9122DB2150814700C98DC6 /* AnimatedTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnimatedTexture.h; path = SDLTutorial/SDLTutorial/AnimatedTexture.h; sourceTree = "<group>"; };
-		ED9122DC215082E400C98DC6 /* AnimatedTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimatedTexture.cpp; path = SDLTutorial/SDLTutorial/AnimatedTexture.cpp; sourceTree = "<group>"; };
-		ED9122DE21509C4700C98DC6 /* AudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AudioManager.h; path = SDLTutorial/SDLTutorial/AudioManager.h; sourceTree = "<group>"; };
-		ED9122DF21509D2200C98DC6 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioManager.cpp; path = SDLTutorial/SDLTutorial/AudioManager.cpp; sourceTree = "<group>"; };
+		ED9122C9214DCDB800C98DC6 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = GalagaSDL/GalagaSDL/Timer.h; sourceTree = "<group>"; };
+		ED9122CA214DCE6800C98DC6 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = GalagaSDL/GalagaSDL/Timer.cpp; sourceTree = "<group>"; };
+		ED9122CC214DD2EB00C98DC6 /* MathHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MathHelper.h; path = GalagaSDL/GalagaSDL/MathHelper.h; sourceTree = "<group>"; };
+		ED9122CE214DD5AE00C98DC6 /* GameEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameEntity.h; path = GalagaSDL/GalagaSDL/GameEntity.h; sourceTree = "<group>"; };
+		ED9122D0214DD70E00C98DC6 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameEntity.cpp; path = GalagaSDL/GalagaSDL/GameEntity.cpp; sourceTree = "<group>"; };
+		ED9122D2214DE28400C98DC6 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = GalagaSDL/GalagaSDL/Texture.h; sourceTree = "<group>"; };
+		ED9122D3214DE30A00C98DC6 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = GalagaSDL/GalagaSDL/Texture.cpp; sourceTree = "<group>"; };
+		ED9122D5214EEFD600C98DC6 /* AssetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AssetManager.h; path = GalagaSDL/GalagaSDL/AssetManager.h; sourceTree = "<group>"; };
+		ED9122D6214EF08300C98DC6 /* AssetManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AssetManager.cpp; path = GalagaSDL/GalagaSDL/AssetManager.cpp; sourceTree = "<group>"; };
+		ED9122D82150777600C98DC6 /* InputManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InputManager.h; path = GalagaSDL/GalagaSDL/InputManager.h; sourceTree = "<group>"; };
+		ED9122D92150782C00C98DC6 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InputManager.cpp; path = GalagaSDL/GalagaSDL/InputManager.cpp; sourceTree = "<group>"; };
+		ED9122DB2150814700C98DC6 /* AnimatedTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnimatedTexture.h; path = GalagaSDL/GalagaSDL/AnimatedTexture.h; sourceTree = "<group>"; };
+		ED9122DC215082E400C98DC6 /* AnimatedTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimatedTexture.cpp; path = GalagaSDL/GalagaSDL/AnimatedTexture.cpp; sourceTree = "<group>"; };
+		ED9122DE21509C4700C98DC6 /* AudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AudioManager.h; path = GalagaSDL/GalagaSDL/AudioManager.h; sourceTree = "<group>"; };
+		ED9122DF21509D2200C98DC6 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioManager.cpp; path = GalagaSDL/GalagaSDL/AudioManager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED1019312151986C000F6EDA /* Galaga */ = {
+			isa = PBXGroup;
+			children = (
+				ED10193321519899000F6EDA /* StartScreen.h */,
+			);
+			name = Galaga;
+			sourceTree = "<group>";
+		};
+		ED10193221519872000F6EDA /* Galaga */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Galaga;
+			sourceTree = "<group>";
+		};
 		ED912297214C4FD400C98DC6 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +124,7 @@
 		ED9122AE214CE5D000C98DC6 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED1019312151986C000F6EDA /* Galaga */,
 				ED9122CD214DD59700C98DC6 /* Entities */,
 				ED9122AF214CE5F600C98DC6 /* Graphics.h */,
 				ED9122B4214CEE7200C98DC6 /* GameManager.h */,
@@ -124,6 +141,7 @@
 		ED9122B0214CE70C00C98DC6 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED10193221519872000F6EDA /* Galaga */,
 				ED9122CF214DD6F500C98DC6 /* Entites */,
 				ED9122B1214CE72F00C98DC6 /* Graphics.cpp */,
 				ED9122B5214CEF2200C98DC6 /* GameManager.cpp */,

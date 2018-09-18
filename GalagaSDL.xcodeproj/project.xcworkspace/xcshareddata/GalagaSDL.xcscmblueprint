@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2B56741AAA63598C45D614947CD9CE4411594FC0+++D842FD6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2B56741AAA63598C45D614947CD9CE4411594FC0+++D842FD6" : 9223372036854775807,
+    "2B56741AAA63598C45D614947CD9CE4411594FC0+++0605F2E" : 9223372036854775807,
+    "2B56741AAA63598C45D614947CD9CE4411594FC0+++06684AE" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4A5893C2-56A1-474F-AEFE-F3BDEFEDDE9D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2B56741AAA63598C45D614947CD9CE4411594FC0+++D842FD6" : "GalagaSDL\/",
+    "2B56741AAA63598C45D614947CD9CE4411594FC0+++0605F2E" : "SDLTutorial\/",
+    "2B56741AAA63598C45D614947CD9CE4411594FC0+++06684AE" : "SDLTutorial\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GalagaSDL",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GalagaSDL.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Hairpull\/GalagaSDL.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B56741AAA63598C45D614947CD9CE4411594FC0+++0605F2E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Hairpull\/SDLTutorial.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B56741AAA63598C45D614947CD9CE4411594FC0+++06684AE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Hairpull\/GalagaSDL.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B56741AAA63598C45D614947CD9CE4411594FC0+++D842FD6"
+    }
+  ]
+}
