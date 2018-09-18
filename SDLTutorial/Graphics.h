@@ -1,11 +1,11 @@
 #ifndef Graphics_h
 #define Graphics_h
 
+#include "SDL2/SDL.h"
+#include "SDL2_image/SDL_image.h"
+#include "SDL2_ttf/SDL_ttf.h"
 #include <string>
 #include <stdio.h>
-
-#include "SDL2_image/SDL_image.h"
-#include "SDL2/SDL.h"
 
 
 class Graphics {
@@ -34,7 +34,7 @@ public:
 	
 
 	SDL_Texture* LoadTexture(std::string path);
-	
+	SDL_Texture* CreateTextTexture(TTF_Font* font, std::string text, SDL_Color color);
 	
 	
 	void ClearBackBuffer();

@@ -26,7 +26,9 @@ private:
 	
 	SDL_Event mEvents;
 	
-	AnimatedTexture* mTex;
+	Texture* mTex;
+	Texture* mTex2;
+
 	
 	
 	

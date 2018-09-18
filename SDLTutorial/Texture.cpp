@@ -39,6 +39,24 @@ Texture::Texture(std::string filename, int x, int y, int w, int h)
 	
 }
 
+Texture::Texture(std::string text, std::string fontpath, int size, SDL_Color color) {
+
+	
+	mGraphics = Graphics::Instance();
+	mTex = AssetManager::Instance()->GetText(text, fontpath, size, color);
+	
+	mClipped = false;
+	
+	SDL_QueryTexture(mTex, NULL, NULL, &mWidth, &mHeight);
+	
+	mRenderRect.w = mWidth;
+	mRenderRect.h = mHeight;
+	
+	
+	
+	
+}
+
 Texture::~Texture() {
 	
 	mTex = NULL;

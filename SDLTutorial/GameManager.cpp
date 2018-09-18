@@ -32,18 +32,20 @@ GameManager::GameManager() {
 	mTimer = Timer::Instance();
 	
 	
-	mTex = new AnimatedTexture("SpriteSheet.png", 204, 45, 40, 38, 4, 0.5f, AnimatedTexture::horizontal);
-	mTex->WrapMode(AnimatedTexture::once);
-	mTex->Pos(Vector2(100, 200));
+	mTex = new Texture("Hello World!", "Arial.ttf", 72, {255, 0, 0});
+	mTex->Pos(Vector2(400, 200));
+	
+	mTex2 = new Texture("Goodbye World!", "Arial.ttf", 72, {0, 255, 0});
+	mTex2->Pos(Vector2(400, 400));
 }
 
 GameManager::~GameManager() {
 	
-	Graphics::Release();
-	mGraphics = NULL;
-	
 	AssetManager::Release();
 	mAssetMgr = NULL;
+	
+	Graphics::Release();
+	mGraphics = NULL;
 	
 	InputManager::Release();
 	mInputMgr = NULL;
@@ -53,6 +55,9 @@ GameManager::~GameManager() {
 	
 	delete mTex;
 	mTex = NULL;
+	
+	delete mTex2;
+	mTex2 = NULL;
 	
 
 	
@@ -76,12 +81,12 @@ void GameManager::Run() {
 		if(mTimer->DeltaTime() >= (1.0f / FRAME_RATE)) {
 			
 			mInputMgr->Update();
-			
-			mTex ->Update();
-			
+						
 			mGraphics->ClearBackBuffer();
 			
 			mTex->Render();
+			mTex2->Render();
+
 			
 			mGraphics->Render();
 			
