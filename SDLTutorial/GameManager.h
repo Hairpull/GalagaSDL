@@ -3,6 +3,7 @@
 
 #include "Texture.h"
 #include "Timer.h"
+#include "InputManager.h"
 
 
 
@@ -19,6 +20,7 @@ private:
 	Graphics* mGraphics;
 	AssetManager* mAssetMgr;
 	
+	InputManager* mInputMgr = InputManager::Instance();
 	
 	Timer* mTimer;
 	

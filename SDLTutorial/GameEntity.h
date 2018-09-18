@@ -41,6 +41,9 @@ public:
 	GameEntity* Parent();
 	
 	
+	void Translate(Vector2 vec);
+	
+	
 	virtual void Update();
 	virtual void Render();
 	
