@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ED91229F214C4FD400C98DC6"
-               BuildableName = "SDLTutorial"
-               BlueprintName = "SDLTutorial"
-               ReferencedContainer = "container:SDLTutorial.xcodeproj">
+               BuildableName = "GalagaSDL"
+               BlueprintName = "GalagaSDL"
+               ReferencedContainer = "container:GalagaSDL.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ED91229F214C4FD400C98DC6"
-            BuildableName = "SDLTutorial"
-            BlueprintName = "SDLTutorial"
-            ReferencedContainer = "container:SDLTutorial.xcodeproj">
+            BuildableName = "GalagaSDL"
+            BlueprintName = "GalagaSDL"
+            ReferencedContainer = "container:GalagaSDL.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ED91229F214C4FD400C98DC6"
-            BuildableName = "SDLTutorial"
-            BlueprintName = "SDLTutorial"
-            ReferencedContainer = "container:SDLTutorial.xcodeproj">
+            BuildableName = "GalagaSDL"
+            BlueprintName = "GalagaSDL"
+            ReferencedContainer = "container:GalagaSDL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ED91229F214C4FD400C98DC6"
-            BuildableName = "SDLTutorial"
-            BlueprintName = "SDLTutorial"
-            ReferencedContainer = "container:SDLTutorial.xcodeproj">
+            BuildableName = "GalagaSDL"
+            BlueprintName = "GalagaSDL"
+            ReferencedContainer = "container:GalagaSDL.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -36,7 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ED9122A0214C4FD400C98DC6 /* SDLTutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLTutorial; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED9122A0214C4FD400C98DC6 /* GalagaSDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GalagaSDL; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		ED9122AF214CE5F600C98DC6 /* Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = SDLTutorial/SDLTutorial/Graphics.h; sourceTree = "<group>"; };
 		ED9122B1214CE72F00C98DC6 /* Graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Graphics.cpp; path = SDLTutorial/SDLTutorial/Graphics.cpp; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		ED9122A1214C4FD400C98DC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED9122A0214C4FD400C98DC6 /* SDLTutorial */,
+				ED9122A0214C4FD400C98DC6 /* GalagaSDL */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED91229F214C4FD400C98DC6 /* SDLTutorial */ = {
+		ED91229F214C4FD400C98DC6 /* GalagaSDL */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED9122A7214C4FD400C98DC6 /* Build configuration list for PBXNativeTarget "SDLTutorial" */;
+			buildConfigurationList = ED9122A7214C4FD400C98DC6 /* Build configuration list for PBXNativeTarget "GalagaSDL" */;
 			buildPhases = (
 				ED91229C214C4FD400C98DC6 /* Sources */,
 				ED91229D214C4FD400C98DC6 /* Frameworks */,
@@ -182,9 +182,9 @@
 			);
 			dependencies = (
 			);
-			name = SDLTutorial;
+			name = GalagaSDL;
 			productName = SDLTutorial;
-			productReference = ED9122A0214C4FD400C98DC6 /* SDLTutorial */;
+			productReference = ED9122A0214C4FD400C98DC6 /* GalagaSDL */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED91229B214C4FD400C98DC6 /* Build configuration list for PBXProject "SDLTutorial" */;
+			buildConfigurationList = ED91229B214C4FD400C98DC6 /* Build configuration list for PBXProject "GalagaSDL" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -215,7 +215,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED91229F214C4FD400C98DC6 /* SDLTutorial */,
+				ED91229F214C4FD400C98DC6 /* GalagaSDL */,
 			);
 		};
 /* End PBXProject section */
@@ -365,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED91229B214C4FD400C98DC6 /* Build configuration list for PBXProject "SDLTutorial" */ = {
+		ED91229B214C4FD400C98DC6 /* Build configuration list for PBXProject "GalagaSDL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED9122A5214C4FD400C98DC6 /* Debug */,
@@ -374,7 +374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED9122A7214C4FD400C98DC6 /* Build configuration list for PBXNativeTarget "SDLTutorial" */ = {
+		ED9122A7214C4FD400C98DC6 /* Build configuration list for PBXNativeTarget "GalagaSDL" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED9122A8214C4FD400C98DC6 /* Debug */,
