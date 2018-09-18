@@ -29,6 +29,8 @@ GameManager::GameManager() {
 	
 	mInputMgr = InputManager::Instance();
 	
+	mAudioMgr = AudioManager::Instance();
+	
 	mTimer = Timer::Instance();
 	
 	
@@ -40,6 +42,9 @@ GameManager::GameManager() {
 }
 
 GameManager::~GameManager() {
+	
+	AudioManager::Release();
+	mAudioMgr = NULL;
 	
 	AssetManager::Release();
 	mAssetMgr = NULL;
@@ -81,6 +86,11 @@ void GameManager::Run() {
 		if(mTimer->DeltaTime() >= (1.0f / FRAME_RATE)) {
 			
 			mInputMgr->Update();
+			
+			if(mInputMgr->KeyDown(SDL_SCANCODE_1)) {
+				
+				mAudioMgr->PlaySFX("beat.wav");
+			}
 						
 			mGraphics->ClearBackBuffer();
 			

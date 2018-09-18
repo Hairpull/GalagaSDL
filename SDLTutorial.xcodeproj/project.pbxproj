@@ -20,6 +20,7 @@
 		ED9122D7214EF08300C98DC6 /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D6214EF08300C98DC6 /* AssetManager.cpp */; };
 		ED9122DA2150782C00C98DC6 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122D92150782C00C98DC6 /* InputManager.cpp */; };
 		ED9122DD215082E400C98DC6 /* AnimatedTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122DC215082E400C98DC6 /* AnimatedTexture.cpp */; };
+		ED9122E021509D2200C98DC6 /* AudioManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122DF21509D2200C98DC6 /* AudioManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,8 @@
 		ED9122D92150782C00C98DC6 /* InputManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InputManager.cpp; path = SDLTutorial/SDLTutorial/InputManager.cpp; sourceTree = "<group>"; };
 		ED9122DB2150814700C98DC6 /* AnimatedTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnimatedTexture.h; path = SDLTutorial/SDLTutorial/AnimatedTexture.h; sourceTree = "<group>"; };
 		ED9122DC215082E400C98DC6 /* AnimatedTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimatedTexture.cpp; path = SDLTutorial/SDLTutorial/AnimatedTexture.cpp; sourceTree = "<group>"; };
+		ED9122DE21509C4700C98DC6 /* AudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AudioManager.h; path = SDLTutorial/SDLTutorial/AudioManager.h; sourceTree = "<group>"; };
+		ED9122DF21509D2200C98DC6 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioManager.cpp; path = SDLTutorial/SDLTutorial/AudioManager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 				ED9122CC214DD2EB00C98DC6 /* MathHelper.h */,
 				ED9122D5214EEFD600C98DC6 /* AssetManager.h */,
 				ED9122D82150777600C98DC6 /* InputManager.h */,
+				ED9122DE21509C4700C98DC6 /* AudioManager.h */,
 			);
 			name = "Header Files";
 			path = ..;
@@ -126,6 +130,7 @@
 				ED9122CA214DCE6800C98DC6 /* Timer.cpp */,
 				ED9122D6214EF08300C98DC6 /* AssetManager.cpp */,
 				ED9122D92150782C00C98DC6 /* InputManager.cpp */,
+				ED9122DF21509D2200C98DC6 /* AudioManager.cpp */,
 			);
 			name = "Source Files";
 			path = ..;
@@ -226,6 +231,7 @@
 				ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */,
 				ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */,
 				ED9122DA2150782C00C98DC6 /* InputManager.cpp in Sources */,
+				ED9122E021509D2200C98DC6 /* AudioManager.cpp in Sources */,
 				ED9122D4214DE30A00C98DC6 /* Texture.cpp in Sources */,
 				ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */,
 				ED9122CB214DCE6800C98DC6 /* Timer.cpp in Sources */,

@@ -94,5 +94,40 @@ SDL_Texture* AssetManager::GetText(std::string text, std::string filename, int s
 	
 	}
 
+Mix_Music* AssetManager::GetMusic(std::string filename) {
+	
+	std::string fullPath = SDL_GetBasePath();
+	fullPath.append(filename);
+	
+	if(mMusic[fullPath] == nullptr) {
+		
+		mMusic[fullPath] = Mix_LoadMUS(fullPath.c_str());
+		if(mMusic[fullPath] == NULL)
+		printf("Music loading error: File-%s Error-%s", filename.c_str(), Mix_GetError());
+	}
+	
+	return mMusic[fullPath];
+}
 
 
+Mix_Chunk* AssetManager::GetSFX(std::string filename) {
+	
+
+	std::string fullPath = SDL_GetBasePath();
+	fullPath.append(filename);
+	
+	if(mSFX[fullPath] == nullptr) {
+		
+		mSFX[fullPath] = Mix_LoadWAV(fullPath.c_str());
+		if(mSFX[fullPath] == NULL)
+			printf("SFX loading error: File-%s Error-%s", filename.c_str(), Mix_GetError());
+	}
+	
+	return mSFX[fullPath];
+
+	
+}
+
+
+
+;

@@ -3,6 +3,7 @@
 
 #include "AnimatedTexture.h"
 #include "InputManager.h"
+#include "AudioManager.h"
 
 
 
@@ -18,8 +19,9 @@ private:
 	bool mQuit;
 	Graphics* mGraphics;
 	AssetManager* mAssetMgr;
+	InputManager* mInputMgr;
+	AudioManager* mAudioMgr;
 	
-	InputManager* mInputMgr = InputManager::Instance();
 	
 	Timer* mTimer;
 	
