@@ -23,7 +23,7 @@ GameManager::GameManager() {
 	mGraphics = Graphics::Instance();
 	
 	if(!Graphics::Initialized())
-	   mQuit = true;
+		mQuit = true;
 	
 	mAssetMgr = AssetManager::Instance();
 	
@@ -33,7 +33,7 @@ GameManager::GameManager() {
 	
 	mTimer = Timer::Instance();
 	
-
+	
 	
 	mTex = new Texture("Hello World!", "Arial.ttf", 72, {255, 0, 0});
 	mTex->Pos(Vector2(400, 200));
@@ -47,7 +47,7 @@ GameManager::GameManager() {
 	
 	
 	mTex2->Parent(mTex);
-
+	
 }
 
 GameManager::~GameManager() {
@@ -73,16 +73,13 @@ GameManager::~GameManager() {
 	delete mTex2;
 	mTex2 = NULL;
 	
-
-	
-
 }
 
 
 void GameManager::EarlyUpdate() {
 	
 	mInputMgr->Update();
-
+	
 	
 }
 
@@ -133,9 +130,9 @@ void GameManager::Render() {
 void GameManager::Run() {
 	
 	while(!mQuit) {
-
+		
 		mTimer->Update();
-	
+		
 		
 		while(SDL_PollEvent(&mEvents) != 0) {
 			

@@ -50,6 +50,25 @@ AssetManager::~AssetManager() {
 	}
 	
 	mFonts.clear();
+	
+	
+	for(auto music : mMusic) {
+		
+		if(music.second != NULL) {
+			
+			Mix_FreeMusic(music.second);
+		}
+	}
+	
+	mMusic.clear();
+	
+	for(auto sfx : mSFX) {
+		if(sfx.second != NULL) {
+			Mix_FreeChunk(sfx.second);
+		}
+	}
+	
+	mSFX.clear();
 }
 
 SDL_Texture* AssetManager::GetTexture(std::string filename) {
