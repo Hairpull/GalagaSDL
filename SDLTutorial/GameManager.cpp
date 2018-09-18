@@ -78,11 +78,64 @@ GameManager::~GameManager() {
 
 }
 
+
+void GameManager::EarlyUpdate() {
+	
+	mInputMgr->Update();
+
+	
+}
+
+void GameManager::Update() {
+	
+	if(mInputMgr->KeyPressed(SDL_SCANCODE_W)) {
+		
+		printf("W Key pressed\n");
+	}
+	
+	if(mInputMgr->KeyReleased(SDL_SCANCODE_W)) {
+		
+		printf("W Key released\n");
+	}
+	
+	if(mInputMgr->MouseButtonPressed(InputManager::left)) {
+		printf("Left mouse button pressed\n");
+	}
+	
+	if(mInputMgr->MouseButtonReleased(InputManager::left)) {
+		printf("Left mouse button released\n");
+	}
+	
+	mTex->Rotate(10 * mTimer->DeltaTime());
+	mTex2->Rotate(-20 * mTimer->DeltaTime());
+}
+
+void GameManager::LateUpdate() {
+	
+	mInputMgr->UpdatePrevInput();
+	mTimer->Reset();
+	
+}
+
+void GameManager::Render() {
+	
+	mGraphics->ClearBackBuffer();
+	
+	mTex->Render();
+	mTex2->Render();
+	
+	
+	mGraphics->Render();
+	
+	
+}
+
 void GameManager::Run() {
 	
 	while(!mQuit) {
-		
+
 		mTimer->Update();
+	
 		
 		while(SDL_PollEvent(&mEvents) != 0) {
 			
@@ -95,29 +148,10 @@ void GameManager::Run() {
 		
 		if(mTimer->DeltaTime() >= (1.0f / FRAME_RATE)) {
 			
-			mInputMgr->Update();
-			
-			if(mInputMgr->KeyDown(SDL_SCANCODE_1)) {
-				
-				mAudioMgr->PlaySFX("beat.wav");
-			}
-			
-			mTex->Rotate(10 * mTimer->DeltaTime());
-			mTex2->Rotate(-20 * mTimer->DeltaTime());
-
-			
-			mGraphics->ClearBackBuffer();
-			
-			mTex->Render();
-			mTex2->Render();
-
-			
-			mGraphics->Render();
-			
-			mTimer->Reset();
-			
+			EarlyUpdate();
+			Update();
+			LateUpdate();
+			Render();
 		}
-		
-		
 	}
 }
