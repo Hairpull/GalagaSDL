@@ -32,8 +32,9 @@ GameManager::GameManager() {
 	mTimer = Timer::Instance();
 	
 	
-	mTex = new Texture("SpriteSheet.png", 182, 54, 20, 20);
-	mTex->Pos(Vector2(Graphics::SCREEN_WIDTH * 0.5f, Graphics::SCREEN_HEIGHT * 0.5f));
+	mTex = new AnimatedTexture("SpriteSheet.png", 204, 45, 40, 38, 4, 0.5f, AnimatedTexture::horizontal);
+	mTex->WrapMode(AnimatedTexture::once);
+	mTex->Pos(Vector2(100, 200));
 }
 
 GameManager::~GameManager() {
@@ -73,28 +74,21 @@ void GameManager::Run() {
 			
 		}
 		if(mTimer->DeltaTime() >= (1.0f / FRAME_RATE)) {
-
+			
 			mInputMgr->Update();
 			
-			if(mInputMgr->KeyDown(SDL_SCANCODE_W)) {
-				
-				mTex->Translate(Vector2(0.0f, -40.0f)* mTimer->DeltaTime());
-			} else if (mInputMgr->KeyDown(SDL_SCANCODE_S)) {
-				
-				mTex->Translate(Vector2(0.0f, 40.0f) * mTimer->DeltaTime());
-			}
-			
+			mTex ->Update();
 			
 			mGraphics->ClearBackBuffer();
 			
 			mTex->Render();
-
+			
 			mGraphics->Render();
 			
 			mTimer->Reset();
-
+			
 		}
 		
-
+		
 	}
 }

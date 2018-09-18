@@ -7,7 +7,7 @@
 
 class Texture : public GameEntity {
 	
-private:
+protected:
 	
 	SDL_Texture* mTex;
 	

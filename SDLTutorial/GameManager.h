@@ -1,8 +1,7 @@
 #ifndef GameManager_h
 #define GameManager_h
 
-#include "Texture.h"
-#include "Timer.h"
+#include "AnimatedTexture.h"
 #include "InputManager.h"
 
 
@@ -27,7 +26,7 @@ private:
 	
 	SDL_Event mEvents;
 	
-	Texture* mTex;
+	AnimatedTexture* mTex;
 	
 	
 	
