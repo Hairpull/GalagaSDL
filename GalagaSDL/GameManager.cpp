@@ -55,12 +55,15 @@ namespace QuickSDL {
 		//Initialize Timer
 		mTimer = Timer::Instance();
 		
-		mStars = BackgroundStars::Instance();
-		mStartScreen = new StartScreen();
+		mScreenMgr = ScreenManager::Instance();
 	}
 
 	GameManager::~GameManager() {
-
+		
+		ScreenManager::Release();
+		mScreenMgr = NULL;
+		
+		
 		AudioManager::Release();
 		mAudioMgr = NULL;
 
@@ -76,11 +79,7 @@ namespace QuickSDL {
 		Timer::Release();
 		mTimer = NULL;
 		
-		BackgroundStars::Release();
-		mStars = NULL;
-		
-		delete mStartScreen;
-		mStartScreen = NULL;
+
 	}
 
 	void GameManager::EarlyUpdate() {
@@ -94,8 +93,7 @@ namespace QuickSDL {
 		//GameEntity Updates should happen here
 		
 		
-		mStars->Update();
-		mStartScreen->Update();
+		mScreenMgr->Update();
 	}
 
 	void GameManager::LateUpdate() {
@@ -114,8 +112,7 @@ namespace QuickSDL {
 		
 		
 		//All other rendering is to happen here
-		mStars->Render();
-		mStartScreen->Render();
+		mScreenMgr->Render();
 		
 		//Renders the current frame
 		mGraphics->Render();

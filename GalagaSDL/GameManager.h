@@ -12,8 +12,7 @@
 //----------------------------------------------------------------
 #include "AudioManager.h"
 #include "Timer.h"
-#include "StartScreen.h"
-#include"BackgroundStars.h"
+#include "ScreenManager.h"
 //----------------------------------------------------------------
 // QuickSDL
 //----------------------------------------------------------------
@@ -45,8 +44,8 @@ namespace QuickSDL {
 		// Used to catch the event when the user exits the game
 		SDL_Event mEvents;
 		
-		BackgroundStars* mStars;
-		StartScreen* mStartScreen;
+		
+		ScreenManager* mScreenMgr;
 
 	public:
 		//-----------------------------------------
