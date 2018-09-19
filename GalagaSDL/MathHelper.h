@@ -95,6 +95,22 @@ namespace QuickSDL {
 		
 		return Vector2((float)(vec.x * cos(radAngle) - vec.y * sin(radAngle)), (float)(vec.x * sin(radAngle) + vec.y * cos(radAngle)));
 	}
+	
+	
+	inline Vector2 Lerp(Vector2& start, Vector2& end, float time) {
+		
+		if(time <= 0.0f)
+			return start;
+		
+		if(time >= 1.0f)
+			return end;
+		
+		Vector2 dir = (end - start).Normalized();
+		float mag = (end - start).Magnitude();
+		
+		return start + dir * mag * time;
+		
+	}
 
 	const Vector2 VEC2_ZERO = { 0.0f, 0.0f };
 	const Vector2 VEC2_ONE = { 1.0f, 1.0f };

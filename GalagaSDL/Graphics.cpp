@@ -89,7 +89,7 @@ namespace QuickSDL {
 		}
 
 		//Setting the renderer's clear color to white
-		SDL_SetRenderDrawColor(mRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+		SDL_SetRenderDrawColor(mRenderer, 0x00, 0x00, 0x00, 0xFF);
 
 		//Initializing the SDL_image library and handling initialization errors
 		int flags = IMG_INIT_PNG;
