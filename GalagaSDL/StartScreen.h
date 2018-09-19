@@ -3,6 +3,7 @@
 #include "AnimatedTexture.h"
 #include "InputManager.h"
 #include "BackgroundStars.h"
+#include "Scoreboard.h"
 
 using namespace QuickSDL;
 
@@ -19,6 +20,9 @@ private:
 	Texture* mPlayerOne;
 	Texture* mHiScore;
 	Texture* mPlayerTwo;
+	Scoreboard* mPlayerOneScore;
+	Scoreboard* mTopScore;
+	Scoreboard* mPlayerTwoScore;
 	
 		// Logo entities
 	Texture* mLogo;

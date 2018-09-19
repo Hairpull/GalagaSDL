@@ -11,6 +11,7 @@
 		ED1019382151D6CA000F6EDA /* Star.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED1019372151D6CA000F6EDA /* Star.cpp */; };
 		ED10193C2151DEAA000F6EDA /* StarLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED10193B2151DEAA000F6EDA /* StarLayer.cpp */; };
 		ED10193F2151E127000F6EDA /* BackgroundStars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED10193E2151E127000F6EDA /* BackgroundStars.cpp */; };
+		ED1019422151E808000F6EDA /* Scoreboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED1019412151E808000F6EDA /* Scoreboard.cpp */; };
 		ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122A3214C4FD400C98DC6 /* main.cpp */; };
 		ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B1214CE72F00C98DC6 /* Graphics.cpp */; };
 		ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B5214CEF2200C98DC6 /* GameManager.cpp */; };
@@ -48,6 +49,8 @@
 		ED10193B2151DEAA000F6EDA /* StarLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StarLayer.cpp; path = GalagaSDL/GalagaSDL/StarLayer.cpp; sourceTree = "<group>"; };
 		ED10193D2151E086000F6EDA /* BackgroundStars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BackgroundStars.h; path = GalagaSDL/GalagaSDL/BackgroundStars.h; sourceTree = "<group>"; };
 		ED10193E2151E127000F6EDA /* BackgroundStars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BackgroundStars.cpp; path = GalagaSDL/GalagaSDL/BackgroundStars.cpp; sourceTree = "<group>"; };
+		ED1019402151E761000F6EDA /* Scoreboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Scoreboard.h; path = GalagaSDL/GalagaSDL/Scoreboard.h; sourceTree = "<group>"; };
+		ED1019412151E808000F6EDA /* Scoreboard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scoreboard.cpp; path = GalagaSDL/GalagaSDL/Scoreboard.cpp; sourceTree = "<group>"; };
 		ED9122A0214C4FD400C98DC6 /* GalagaSDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GalagaSDL; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/hairpull/Documents/GalagaSDL/GalagaSDL/main.cpp; sourceTree = "<absolute>"; };
 		ED9122AF214CE5F600C98DC6 /* Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = GalagaSDL/GalagaSDL/Graphics.h; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 				ED1019362151D5DD000F6EDA /* Star.h */,
 				ED10193A2151DE21000F6EDA /* StarLayer.h */,
 				ED10193D2151E086000F6EDA /* BackgroundStars.h */,
+				ED1019402151E761000F6EDA /* Scoreboard.h */,
 			);
 			name = Galaga;
 			sourceTree = "<group>";
@@ -108,6 +112,7 @@
 				ED1019372151D6CA000F6EDA /* Star.cpp */,
 				ED10193B2151DEAA000F6EDA /* StarLayer.cpp */,
 				ED10193E2151E127000F6EDA /* BackgroundStars.cpp */,
+				ED1019412151E808000F6EDA /* Scoreboard.cpp */,
 			);
 			name = Galaga;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				ED9122DD215082E400C98DC6 /* AnimatedTexture.cpp in Sources */,
 				ED1019382151D6CA000F6EDA /* Star.cpp in Sources */,
 				ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */,
+				ED1019422151E808000F6EDA /* Scoreboard.cpp in Sources */,
 				ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */,
 				ED10193C2151DEAA000F6EDA /* StarLayer.cpp in Sources */,
 				ED10193F2151E127000F6EDA /* BackgroundStars.cpp in Sources */,
