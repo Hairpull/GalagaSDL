@@ -1,6 +1,7 @@
 #ifndef ScreenManager_h
 #define ScreenManager_h
 #include "StartScreen.h"
+#include "PlayScreen.h"
 
 class ScreenManager {
 	
@@ -15,6 +16,7 @@ private:
 	
 	BackgroundStars* mBackgroundStars;
 	StartScreen* mStartScreen;
+	PlayScreen* mPlayScreen;
 	
 	SCREENS mCurrentScreen;
 	

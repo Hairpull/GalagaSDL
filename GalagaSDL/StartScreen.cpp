@@ -42,7 +42,7 @@ StartScreen::StartScreen() {
 	
 		// logo entities
 	mLogo = new Texture("galagalogo.png", 0, 0, 360, 180);
-	mAnimatedLogo = new AnimatedTexture("galagalogo.png", 0, 0, 360, 180, 3, 0.32f, AnimatedTexture::vertical);
+	mAnimatedLogo = new AnimatedTexture("galagalogo.png", 0, 0, 360, 180, 3, 0.35f, AnimatedTexture::vertical);
 	
 	mLogo->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH * 0.5f, Graphics::Instance()->SCREEN_HEIGHT * 0.32f));
 	mAnimatedLogo->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH * 0.5f, Graphics::Instance()->SCREEN_HEIGHT * 0.32f));
@@ -81,7 +81,7 @@ StartScreen::StartScreen() {
 	
 
 	mBotBar = new GameEntity(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.5f, Graphics::Instance()->SCREEN_HEIGHT*0.7f));
-	mNamco = new Texture("namcot", "namco__.ttf", 36, { 200, 0, 0 });
+	mNamco = new Texture("namco", "namco__.ttf", 36, { 200, 0, 0 });
 	mDates = new Texture("1981 1985 NAMCO LTD.", "emulogic.ttf", 32, {230, 230, 230 });
 	mRights = new Texture("ALL RIGHTS RESERVED", "emulogic.ttf", 32, { 230, 230, 230 });
 	
