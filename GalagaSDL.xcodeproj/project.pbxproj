@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ED1019352151A3C4000F6EDA /* StartScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED1019342151A3C4000F6EDA /* StartScreen.cpp */; };
+		ED1019382151D6CA000F6EDA /* Star.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED1019372151D6CA000F6EDA /* Star.cpp */; };
+		ED10193C2151DEAA000F6EDA /* StarLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED10193B2151DEAA000F6EDA /* StarLayer.cpp */; };
+		ED10193F2151E127000F6EDA /* BackgroundStars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED10193E2151E127000F6EDA /* BackgroundStars.cpp */; };
 		ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122A3214C4FD400C98DC6 /* main.cpp */; };
 		ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B1214CE72F00C98DC6 /* Graphics.cpp */; };
 		ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B5214CEF2200C98DC6 /* GameManager.cpp */; };
@@ -39,6 +42,12 @@
 /* Begin PBXFileReference section */
 		ED10193321519899000F6EDA /* StartScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StartScreen.h; path = GalagaSDL/GalagaSDL/StartScreen.h; sourceTree = "<group>"; };
 		ED1019342151A3C4000F6EDA /* StartScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StartScreen.cpp; path = GalagaSDL/GalagaSDL/StartScreen.cpp; sourceTree = "<group>"; };
+		ED1019362151D5DD000F6EDA /* Star.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Star.h; path = GalagaSDL/GalagaSDL/Star.h; sourceTree = "<group>"; };
+		ED1019372151D6CA000F6EDA /* Star.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Star.cpp; path = GalagaSDL/GalagaSDL/Star.cpp; sourceTree = "<group>"; };
+		ED10193A2151DE21000F6EDA /* StarLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StarLayer.h; path = GalagaSDL/GalagaSDL/StarLayer.h; sourceTree = "<group>"; };
+		ED10193B2151DEAA000F6EDA /* StarLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StarLayer.cpp; path = GalagaSDL/GalagaSDL/StarLayer.cpp; sourceTree = "<group>"; };
+		ED10193D2151E086000F6EDA /* BackgroundStars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BackgroundStars.h; path = GalagaSDL/GalagaSDL/BackgroundStars.h; sourceTree = "<group>"; };
+		ED10193E2151E127000F6EDA /* BackgroundStars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BackgroundStars.cpp; path = GalagaSDL/GalagaSDL/BackgroundStars.cpp; sourceTree = "<group>"; };
 		ED9122A0214C4FD400C98DC6 /* GalagaSDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GalagaSDL; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/hairpull/Documents/GalagaSDL/GalagaSDL/main.cpp; sourceTree = "<absolute>"; };
 		ED9122AF214CE5F600C98DC6 /* Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = GalagaSDL/GalagaSDL/Graphics.h; sourceTree = "<group>"; };
@@ -85,6 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				ED10193321519899000F6EDA /* StartScreen.h */,
+				ED1019362151D5DD000F6EDA /* Star.h */,
+				ED10193A2151DE21000F6EDA /* StarLayer.h */,
+				ED10193D2151E086000F6EDA /* BackgroundStars.h */,
 			);
 			name = Galaga;
 			sourceTree = "<group>";
@@ -93,6 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				ED1019342151A3C4000F6EDA /* StartScreen.cpp */,
+				ED1019372151D6CA000F6EDA /* Star.cpp */,
+				ED10193B2151DEAA000F6EDA /* StarLayer.cpp */,
+				ED10193E2151E127000F6EDA /* BackgroundStars.cpp */,
 			);
 			name = Galaga;
 			sourceTree = "<group>";
@@ -249,8 +264,11 @@
 				ED9122D7214EF08300C98DC6 /* AssetManager.cpp in Sources */,
 				ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */,
 				ED9122DD215082E400C98DC6 /* AnimatedTexture.cpp in Sources */,
+				ED1019382151D6CA000F6EDA /* Star.cpp in Sources */,
 				ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */,
 				ED9122D1214DD70E00C98DC6 /* GameEntity.cpp in Sources */,
+				ED10193C2151DEAA000F6EDA /* StarLayer.cpp in Sources */,
+				ED10193F2151E127000F6EDA /* BackgroundStars.cpp in Sources */,
 				ED9122DA2150782C00C98DC6 /* InputManager.cpp in Sources */,
 				ED9122E021509D2200C98DC6 /* AudioManager.cpp in Sources */,
 				ED9122D4214DE30A00C98DC6 /* Texture.cpp in Sources */,

@@ -2,6 +2,7 @@
 #define StartScreen_h
 #include "AnimatedTexture.h"
 #include "InputManager.h"
+#include "BackgroundStars.h"
 
 using namespace QuickSDL;
 
@@ -46,6 +47,8 @@ private:
 	float mAnimationTotalTime;
 	float mAnimationTimer;
 	bool mAnimationDone;
+	
+	BackgroundStars* mStars;
 	
 	
 public:

@@ -92,6 +92,9 @@ StartScreen::StartScreen() {
 	
 	Pos(mAnimationStartPos);
 	
+	mStars = BackgroundStars::Instance();
+	mStars->Scroll(true);
+	
 }
 
 StartScreen::~StartScreen() {
@@ -161,8 +164,10 @@ void StartScreen::Update() {
 		mAnimationTimer += mTimer->DeltaTime();
 		Pos(Lerp(mAnimationStartPos, mAnimationEndPos, mAnimationTimer / mAnimationTotalTime));
 		
-		if(mAnimationTimer >= mAnimationTotalTime)
+		if(mAnimationTimer >= mAnimationTotalTime) {
 			mAnimationDone = true;
+			mStars->Scroll(false);
+		}
 		
 		if(mInput->KeyPressed(SDL_SCANCODE_DOWN) || mInput->KeyPressed(SDL_SCANCODE_UP))
 			mAnimationTimer = mAnimationTotalTime;

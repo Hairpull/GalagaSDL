@@ -7,6 +7,7 @@
 // By: Ather Omar                                                      //
 //---------------------------------------------------------------------//
 #include "GameManager.h"
+#include <time.h>
 //-----------------------------------------------------------
 // QuickSDL
 //-----------------------------------------------------------
@@ -30,6 +31,8 @@ namespace QuickSDL {
 	}
 
 	GameManager::GameManager() {
+		
+		srand((Uint8)time(0));
 
 		mQuit = false;
 
@@ -52,6 +55,7 @@ namespace QuickSDL {
 		//Initialize Timer
 		mTimer = Timer::Instance();
 		
+		mStars = BackgroundStars::Instance();
 		mStartScreen = new StartScreen();
 	}
 
@@ -72,6 +76,9 @@ namespace QuickSDL {
 		Timer::Release();
 		mTimer = NULL;
 		
+		BackgroundStars::Release();
+		mStars = NULL;
+		
 		delete mStartScreen;
 		mStartScreen = NULL;
 	}
@@ -86,6 +93,8 @@ namespace QuickSDL {
 
 		//GameEntity Updates should happen here
 		
+		
+		mStars->Update();
 		mStartScreen->Update();
 	}
 
@@ -102,7 +111,10 @@ namespace QuickSDL {
 		//Clears the last frame's render from the back buffer
 		mGraphics->ClearBackBuffer();
 
+		
+		
 		//All other rendering is to happen here
+		mStars->Render();
 		mStartScreen->Render();
 		
 		//Renders the current frame
