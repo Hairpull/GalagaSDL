@@ -128,6 +128,7 @@
 				ED16201B2151F2F400E21B76 /* ScreenManager.cpp */,
 				ED16201E2152F06C00E21B76 /* PlayScreen.cpp */,
 				ED1620212152F5B200E21B76 /* PlaySideBar.cpp */,
+				ED9122A3214C4FD400C98DC6 /* main.cpp */,
 			);
 			name = Galaga;
 			sourceTree = "<group>";
@@ -137,7 +138,6 @@
 			children = (
 				ED9122AE214CE5D000C98DC6 /* Header Files */,
 				ED9122B0214CE70C00C98DC6 /* Source Files */,
-				ED9122A2214C4FD400C98DC6 /* SDLTutorial */,
 				ED9122A1214C4FD400C98DC6 /* Products */,
 				ED9122C0214CFBFD00C98DC6 /* Frameworks */,
 			);
@@ -149,14 +149,6 @@
 				ED9122A0214C4FD400C98DC6 /* GalagaSDL */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		ED9122A2214C4FD400C98DC6 /* SDLTutorial */ = {
-			isa = PBXGroup;
-			children = (
-				ED9122A3214C4FD400C98DC6 /* main.cpp */,
-			);
-			path = SDLTutorial;
 			sourceTree = "<group>";
 		};
 		ED9122AE214CE5D000C98DC6 /* Header Files */ = {
