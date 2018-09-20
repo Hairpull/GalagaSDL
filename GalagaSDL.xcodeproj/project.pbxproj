@@ -15,6 +15,7 @@
 		ED16201C2151F2F400E21B76 /* ScreenManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED16201B2151F2F400E21B76 /* ScreenManager.cpp */; };
 		ED16201F2152F06C00E21B76 /* PlayScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED16201E2152F06C00E21B76 /* PlayScreen.cpp */; };
 		ED1620222152F5B200E21B76 /* PlaySideBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED1620212152F5B200E21B76 /* PlaySideBar.cpp */; };
+		ED1620252153393900E21B76 /* Level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED1620242153393900E21B76 /* Level.cpp */; };
 		ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122A3214C4FD400C98DC6 /* main.cpp */; };
 		ED9122B3214CE72F00C98DC6 /* Graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B1214CE72F00C98DC6 /* Graphics.cpp */; };
 		ED9122B6214CEF2200C98DC6 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED9122B5214CEF2200C98DC6 /* GameManager.cpp */; };
@@ -60,6 +61,8 @@
 		ED16201E2152F06C00E21B76 /* PlayScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayScreen.cpp; path = GalagaSDL/GalagaSDL/PlayScreen.cpp; sourceTree = "<group>"; };
 		ED1620202152F50E00E21B76 /* PlaySideBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlaySideBar.h; path = GalagaSDL/GalagaSDL/PlaySideBar.h; sourceTree = "<group>"; };
 		ED1620212152F5B200E21B76 /* PlaySideBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlaySideBar.cpp; path = GalagaSDL/GalagaSDL/PlaySideBar.cpp; sourceTree = "<group>"; };
+		ED1620232153380200E21B76 /* Level.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Level.h; path = GalagaSDL/GalagaSDL/Level.h; sourceTree = "<group>"; };
+		ED1620242153393900E21B76 /* Level.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Level.cpp; path = GalagaSDL/GalagaSDL/Level.cpp; sourceTree = "<group>"; };
 		ED9122A0214C4FD400C98DC6 /* GalagaSDL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GalagaSDL; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED9122A3214C4FD400C98DC6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = /Users/hairpull/Documents/GalagaSDL/GalagaSDL/main.cpp; sourceTree = "<absolute>"; };
 		ED9122AF214CE5F600C98DC6 /* Graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = GalagaSDL/GalagaSDL/Graphics.h; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 				ED16201A2151F11900E21B76 /* ScreenManager.h */,
 				ED16201D2152EFE300E21B76 /* PlayScreen.h */,
 				ED1620202152F50E00E21B76 /* PlaySideBar.h */,
+				ED1620232153380200E21B76 /* Level.h */,
 			);
 			name = Galaga;
 			sourceTree = "<group>";
@@ -129,6 +133,7 @@
 				ED16201E2152F06C00E21B76 /* PlayScreen.cpp */,
 				ED1620212152F5B200E21B76 /* PlaySideBar.cpp */,
 				ED9122A3214C4FD400C98DC6 /* main.cpp */,
+				ED1620242153393900E21B76 /* Level.cpp */,
 			);
 			name = Galaga;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				ED10193C2151DEAA000F6EDA /* StarLayer.cpp in Sources */,
 				ED10193F2151E127000F6EDA /* BackgroundStars.cpp in Sources */,
 				ED9122DA2150782C00C98DC6 /* InputManager.cpp in Sources */,
+				ED1620252153393900E21B76 /* Level.cpp in Sources */,
 				ED9122E021509D2200C98DC6 /* AudioManager.cpp in Sources */,
 				ED9122D4214DE30A00C98DC6 /* Texture.cpp in Sources */,
 				ED9122A4214C4FD400C98DC6 /* main.cpp in Sources */,
