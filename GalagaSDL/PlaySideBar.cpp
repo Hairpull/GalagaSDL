@@ -39,7 +39,7 @@ PlaySideBar::PlaySideBar() {
 	
 	mShips = new GameEntity();
 	mShips->Parent(this);
-	mShips->Pos(Vector2(-40.0f,400.0f));
+	mShips->Pos(Vector2(-40.0f,420.0f));
 	
 	
 	for(int i = 0; i < MAX_SHIP_TEXTURES; i++) {
@@ -51,6 +51,14 @@ PlaySideBar::PlaySideBar() {
 	mTotalShipsLabel = new Scoreboard();
 	mTotalShipsLabel->Parent(mShips);
 	mTotalShipsLabel->Pos(Vector2(140.0f, 80.0f));
+	
+	mFlags = new GameEntity();
+	mFlags->Parent(this);
+	mFlags->Pos(Vector2(-50.0f, 650.0f));
+	
+	
+	mFlagTimer = 0.0f;
+	mFlagInterval = 0.2f;
 	
 }
 
@@ -83,6 +91,58 @@ PlaySideBar::~PlaySideBar() {
 	
 	delete mTotalShipsLabel;
 	mTotalShipsLabel = NULL;
+	
+	delete mFlags;
+	mFlags = NULL;
+	
+	ClearFlags();
+}
+
+void PlaySideBar::ClearFlags() {
+	
+	for (int i = 0; i < mFlagTextures.size(); i++) {
+		
+		delete mFlagTextures[i];
+		mFlagTextures[i] = NULL;
+	}
+	
+	mFlagTextures.clear();
+}
+
+void PlaySideBar::AddNextFlag() {
+	
+	if(mRemainingLevels >= 50)
+		AddFlag("fiftylevelflag.png", 62.0f, 50);
+	else if(mRemainingLevels >= 30)
+		AddFlag("thirtylevelflag.png", 62.0f, 30);
+	else if (mRemainingLevels >= 20)
+		AddFlag("twentylevelflag.png", 62.0f, 20);
+	else if (mRemainingLevels >= 10)
+		AddFlag("tenlevelflag.png", 54, 10);
+	else if (mRemainingLevels >= 5)
+		AddFlag("fivelevelflag.png", 30.0f, 5);
+	else
+		AddFlag("onelevelflag.png", 30.0f, 1);
+	
+	mAudio->PlaySFX("flagsound.wav");
+}
+
+void PlaySideBar::AddFlag(std::string filename, float width, int value) {
+	
+	int index = (int)mFlagTextures.size();
+	
+	
+	
+	if(index > 0)
+		mFlagXOffset += width * 0.5f;
+	
+	
+	mRemainingLevels -= value;
+	mFlagTextures.push_back(new Texture(filename));
+	mFlagTextures[index]->Parent(mFlags);
+	mFlagTextures[index]->Pos(VEC2_RIGHT*mFlagXOffset);
+	mFlagXOffset += width * 0.5f;
+	
 }
 
 void PlaySideBar::SetHighScore(int score) {
@@ -103,6 +163,17 @@ void PlaySideBar::SetShips(int ships) {
 		mTotalShipsLabel->Score(ships);
 }
 
+
+void PlaySideBar::SetLevel(int level) {
+	
+	ClearFlags();
+	
+	mRemainingLevels = level;
+	mFlagXOffset = 0.0f;
+	
+	
+}
+
 void PlaySideBar::Update() {
 	
 	
@@ -112,6 +183,16 @@ void PlaySideBar::Update() {
 	
 		mPlayerOneLabelVisible = !mPlayerOneLabelVisible;
 		mBlinkTimer = 0.0f;
+	}
+	
+	
+	if(mRemainingLevels > 0) {
+		mFlagTimer += mTimer->DeltaTime();
+		if(mFlagTimer >= mFlagInterval) {
+			
+			AddNextFlag();
+			mFlagTimer = 0.05f;
+		}
 	}
 }
 
@@ -133,4 +214,7 @@ void PlaySideBar::Render() {
 
 	if(mTotalShips > MAX_SHIP_TEXTURES)
 		mTotalShipsLabel->Render();
+	
+	for(int i = 0; i < mFlagTextures.size(); i++)
+		mFlagTextures[i]->Render();
 }

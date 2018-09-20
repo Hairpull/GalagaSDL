@@ -33,6 +33,21 @@ private:
 	int mTotalShips;
 	
 	
+	GameEntity* mFlags;
+	std::vector<Texture*> mFlagTextures;
+	int mRemainingLevels;
+	int mFlagXOffset;
+	float mFlagTimer;
+	float mFlagInterval;
+	
+private:
+	
+	void ClearFlags();
+	void AddNextFlag();
+	void AddFlag(std::string filename, float width, int value);
+	
+	
+	
 public:
 	
 	PlaySideBar();
@@ -41,6 +56,7 @@ public:
 	void SetHighScore(int score );
 	void SetPlayerScore(int score);
 	void SetShips(int ships);
+	void SetLevel(int level);
 	
 	void Update();
 	void Render();
