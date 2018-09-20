@@ -11,7 +11,7 @@ PlayScreen::PlayScreen() {
 	mSideBar->Parent(this);
 	mSideBar->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH*0.85f, Graphics::Instance()->SCREEN_HEIGHT*0.05f));
 	mSideBar->SetHighScore(30000);
-	mSideBar->SetPlayerScore(50000);
+	mSideBar->SetShips(3);
 	
 }
 
