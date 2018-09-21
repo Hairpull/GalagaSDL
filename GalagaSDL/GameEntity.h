@@ -119,7 +119,7 @@ namespace QuickSDL {
 		//---------------------------------------------------------------
 		//Translates the GameEntity's lcoal position by the given amount 
 		//---------------------------------------------------------------
-		void Translate(Vector2 vec);
+		void Translate(Vector2 vec, SPACE space = local);
 		//------------------------------------------------------
 		//Rotates the GameEntity's locally by the given amount  
 		//------------------------------------------------------
