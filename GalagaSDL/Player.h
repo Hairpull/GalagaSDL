@@ -2,6 +2,10 @@
 #define Player_h
 #include "AnimatedTexture.h"
 #include "InputManager.h"
+#include "AudioManager.h"
+
+
+
 
 using namespace QuickSDL;
 
@@ -12,6 +16,7 @@ private:
 	
 	Timer* mTimer;
 	InputManager* mInput;
+	AudioManager* mAudio;
 	
 	bool mVisible;
 	bool mAnimating;
@@ -20,6 +25,8 @@ private:
 	int mLives;
 	
 	Texture* mShip;
+	
+	AnimatedTexture* mDeathAnimation;
 	
 	float mMoveSpeed;
 	Vector2 mMoveBounds;
@@ -42,6 +49,8 @@ public:
 	
 	
 	void AddScore(int change);
+	
+	void WasHit();
 	
 	void Update();
 	void Render();

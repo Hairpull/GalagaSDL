@@ -65,14 +65,29 @@ void PlayScreen::StartNewGame() {
 
 	
 	mStars->Scroll(false);
+	
 	mSideBar->SetHighScore(30000);
 	mSideBar->SetShips(mPlayer->Lives());
 	mSideBar->SetPlayerScore(mPlayer->Score());
+	mSideBar->SetLevel(0);
+	
+	
 	mGameStarted = false;
-	mAudio->PlayMusic("gamestart.wav", 0);
+	mLevelStarted = false;
+	mLevelStartTimer = 0.0f;
 	mCurrentStage = 0;
 	
+	mAudio->PlayMusic("gamestart.wav", 0);
 }
+
+bool PlayScreen::GameOver() {
+	
+	if(!mLevelStarted)
+		return false;
+
+	return (mLevel->State() == Level::gameover);
+}
+
 
 void PlayScreen::Update() {
 	
@@ -99,17 +114,17 @@ void PlayScreen::Update() {
 		if(mCurrentStage > 0)
 			mSideBar->Update();
 		
-		if(mLevelStarted)
-			mLevel->Update();
-		
-		mPlayer->Update();
-		
-		
-		if(mInput->KeyPressed(SDL_SCANCODE_N)) {
+		if(mLevelStarted) {
 			
-			mLevelStarted = false;
+			mLevel->Update();
+			
+			if(mLevel->State() == Level::finished) {
+				
+				mLevelStarted = false;
+			}
 		}
-	}
+		mPlayer->Update();
+		}
 }
 
 void PlayScreen::Render() {

@@ -78,6 +78,10 @@ namespace QuickSDL {
 		//Sets the wrap mode of the animation
 		//---------------------------------------
 		void WrapMode(WRAP_MODE mode);
+		
+		void ResetAnimation();
+		
+		bool IsAnimating();
 
 		//---------------------------------------------------------------------------
 		//Used to update the animation frames and loop the animation if needed
