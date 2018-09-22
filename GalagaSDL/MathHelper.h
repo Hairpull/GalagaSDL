@@ -15,6 +15,7 @@ namespace QuickSDL {
 	//----------------------------------------------------------------------
 	#define PI 3.14159265
 	#define DEG_TO_RAD PI / 180.0f
+	#define RAD_TO_DEG 180.0f / PI 
 	//--------------------------------------------------------------------------------------------------
 	// Vector2 structs consist of x and y values discribing a 2D vector,                                
 	// along with vector magnitude calculations, normalization, and operator overloading of += and -=   
@@ -88,7 +89,12 @@ namespace QuickSDL {
 
 		return Vector2(lhs.x * rhs, lhs.y * rhs);
 	}
-
+	
+	inline Vector2 operator *(const float& lhs, const Vector2& rhs) {
+		
+		return Vector2(lhs * rhs.x, lhs * rhs.y);
+	}
+	
 	//----------------------------------------------------------------
 	//Rotates the given vector by the given angle around the origin   
 	//(Does not change the original vector)                             
@@ -120,5 +126,29 @@ namespace QuickSDL {
 	const Vector2 VEC2_ONE = { 1.0f, 1.0f };
 	const Vector2 VEC2_UP = { 0.0f, 1.0f };
 	const Vector2 VEC2_RIGHT = { 1.0f, 0.0f };
+	
+	
+	struct BezierCurve {
+		
+		Vector2 p0;
+		Vector2 p1;
+		Vector2 p2;
+		Vector2 p3;
+		
+		Vector2 CalculateCurvePoint(float t) {
+			
+			float tt = t * t;
+			float ttt = tt * t;
+			float u = 1.0f -t;
+			float uu = u * u;
+			float uuu = uu * u;
+			
+			
+			Vector2 point = (uuu * p0) +  (3 * uu * t * p1) + ( 3 * u * tt * p2) + (ttt * p3);
+			point.x = round(point.x);
+			point.y = round(point.y);
+			return point;
+		}
+	};
 }
 #endif

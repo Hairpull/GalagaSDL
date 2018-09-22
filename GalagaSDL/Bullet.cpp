@@ -38,9 +38,8 @@ void Bullet::Reload() {
 }
 
 void Bullet::Update() {
-	
 	if(Active()) {
-		
+		 
 		Translate(-VEC2_UP * mSpeed * mTimer->DeltaTime(), local);
 		
 		Vector2 pos = Pos();

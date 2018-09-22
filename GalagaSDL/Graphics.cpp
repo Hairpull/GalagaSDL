@@ -173,6 +173,13 @@ namespace QuickSDL {
 
 		SDL_RenderCopyEx(mRenderer, tex, clip, rend, angle, NULL, flip);
 	}
+	
+	void Graphics::DrawLine(float startX, float startY, float endX, float endY) {
+		
+		SDL_SetRenderDrawColor(mRenderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
+		SDL_RenderDrawLine(mRenderer, startX, startY, endX, endY);
+		SDL_SetRenderDrawColor(mRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+	}
 
 	void Graphics::Render() {
 

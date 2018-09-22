@@ -3,11 +3,15 @@
 #include "InputManager.h"
 #include "PlaySideBar.h"
 #include "BackgroundStars.h"
-#include "Player.h" 
+#include "Player.h"
+#include "Enemy.h"
 
 class Level : public GameEntity {
 	
 public:
+	
+	
+	
 	enum LEVEL_STATES { running, finished, gameover };
 	
 private:
@@ -43,6 +47,8 @@ private:
 	float mGameOverLabelOnScreen;
 	
 	LEVEL_STATES mCurrentState;
+	
+	Enemy* mEnemy;
 	
 	
 private:

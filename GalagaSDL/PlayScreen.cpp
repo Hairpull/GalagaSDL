@@ -23,6 +23,8 @@ PlayScreen::PlayScreen() {
 	
 	mPlayer = NULL;
 	
+	Enemy::CreatePaths();
+	
 }
 
 PlayScreen::~PlayScreen() {
