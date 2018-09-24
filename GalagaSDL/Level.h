@@ -4,7 +4,9 @@
 #include "PlaySideBar.h"
 #include "BackgroundStars.h"
 #include "Player.h"
-#include "Enemy.h"
+#include "Butterfly.h"
+#include "Wasp.h"
+#include "Boss.h"
 
 class Level : public GameEntity {
 	
@@ -48,8 +50,19 @@ private:
 	
 	LEVEL_STATES mCurrentState;
 	
-	Enemy* mEnemy;
+	Formation* mFormation;
 	
+	
+	const int MAX_BUTTERFLIES = 16;
+	int mButterflyCount;
+	
+	const int MAX_WASPS = 20;
+	int mWaspCount;
+
+	const int MAX_BOSSES = 4;
+	int mBossCount;
+	
+	std::vector<Enemy*> mEnemies;
 	
 private:
 	
@@ -57,6 +70,10 @@ private:
 	void HandleStartLabels();
 	void HandleCollisions();
 	void HandlePlayerDeath();
+	
+	
+	void HandleEnemySpawning();
+	void HandleEnemyFormation();
 	
 public:
 	

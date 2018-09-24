@@ -50,11 +50,17 @@ Level::Level(int stage, PlaySideBar* sidebar, Player* player) {
 	
 	mCurrentState = running;
 	
-	mEnemy = new Enemy(0);
+	mFormation = new Formation();
+	mFormation->Pos(Vector2(Graphics::Instance()->SCREEN_WIDTH * 0.4, 150.0f));
+	
+	Enemy::SetFormation(mFormation);
+	
+	mButterflyCount = 0;
+	mWaspCount = 0;
+	mBossCount = 0;
 }
 
-
-Level::~Level() {
+Level::~Level(){
 	
 	mTimer = NULL;
 	mSideBar = NULL;
@@ -73,9 +79,14 @@ Level::~Level() {
 	delete mGameOverLabel;
 	mGameOverLabel = NULL;
 	
-	delete mEnemy;
-	mEnemy = NULL;
+	delete mFormation;
+	mFormation = NULL;
 	
+	for(int i = 0; i < mEnemies.size(); i++) {
+		
+		delete mEnemies[i];
+		mEnemies[i] = NULL;
+	}
 }
 
 
@@ -159,6 +170,52 @@ void Level::HandlePlayerDeath() {
 	}
 }
 
+
+void Level::HandleEnemySpawning() {
+	
+	if(InputManager::Instance()->KeyPressed(SDL_SCANCODE_S) && mButterflyCount < MAX_BUTTERFLIES) {
+		
+		mEnemies.push_back(new Butterfly(mButterflyCount, 0, false));
+		mButterflyCount++;
+	}
+	
+	if(InputManager::Instance()->KeyPressed(SDL_SCANCODE_D) && mWaspCount < MAX_WASPS) {
+		
+		mEnemies.push_back(new Wasp(mWaspCount, 0, false, false));
+		mWaspCount++;
+	}
+	
+	if(InputManager::Instance()->KeyPressed(SDL_SCANCODE_F) && mBossCount < MAX_BOSSES) {
+		
+		mEnemies.push_back(new Boss(mBossCount, 0, false));
+		mBossCount++;
+	}
+}
+
+
+void Level::HandleEnemyFormation() {
+	
+	
+	mFormation->Update();
+	if(mButterflyCount == MAX_BUTTERFLIES && mWaspCount == MAX_WASPS && mBossCount == MAX_BOSSES) {
+		
+		bool flyIn = false;
+		
+		for(int i =0; i < mEnemies.size(); i++) {
+			
+			if(mEnemies[i]->CurrentState() == Enemy::flyIn)
+
+				flyIn = true;
+		}
+		
+		if(!flyIn) {
+			
+			mFormation->Lock();
+		}
+	}
+} 
+
+
 Level::LEVEL_STATES Level::State() {
 	
 	return mCurrentState;
@@ -172,7 +229,11 @@ void Level::Update() {
 		
 	} else {
 		
-		mEnemy->Update();
+		HandleEnemySpawning();
+		HandleEnemyFormation();
+		
+		for (int i = 0; i < mEnemies.size(); i++ )
+			mEnemies[i]->Update();
 		
 		HandleCollisions();
 		
@@ -205,7 +266,8 @@ void Level::Render() {
 		}
 	} else {
 		
-		mEnemy->Render();
+		for (int i = 0; i < mEnemies.size(); i++ )
+			mEnemies[i]->Render();
 		
 		if(mPlayerHit) {
 			

@@ -1,6 +1,7 @@
 #include "Enemy.h"
 
 std::vector<std::vector<Vector2>> Enemy::sPaths;
+Formation* Enemy::sFormation = NULL;
 
 void Enemy::CreatePaths() {
 	
@@ -23,7 +24,13 @@ void Enemy::CreatePaths() {
 	
 }
 
-Enemy::Enemy(int path) {
+void Enemy::SetFormation(Formation* f) {
+	
+	sFormation = f;
+}
+
+
+Enemy::Enemy(int index, int path, bool challengeStage) {
 	
 	mTimer = Timer::Instance();
 	
@@ -31,15 +38,17 @@ Enemy::Enemy(int path) {
 	
 	mCurrentState = flyIn;
 	
-	mCurrentWaypoint = 0;
-	Pos(sPaths[mCurrentPath][mCurrentWaypoint]);
+	mCurrentWaypoint = 1;
+	Pos(sPaths[mCurrentPath][0]);
 	
 	
-	mTexture = new Texture("butterfly.png");
-	mTexture->Parent(this);
-	mTexture->Pos(VEC2_ZERO);
+	mTexture = NULL;
 	
 	mSpeed = 400.0f;
+	
+	mIndex = index;
+	
+	mChallengeStage = challengeStage;
 	
 }
 
@@ -51,23 +60,55 @@ Enemy::~Enemy() {
 	mTexture = NULL;
 }
 
+void Enemy::PathComplete() {
+	
+	
+	if(mChallengeStage)
+		mCurrentState = dead;
+}
+
+Vector2 Enemy::FlyInTargetPosition() {
+	
+	return sFormation->Pos() + mTargetPosition;
+}
+
+void Enemy::FlyInComplete() {
+	
+	Pos(FlyInTargetPosition());
+	Rotation(0);
+	Parent(sFormation);
+	mCurrentState = formation;
+	
+}
+
 
 void Enemy::HandleFlyInState() {
 	
-	if((sPaths[mCurrentPath][mCurrentWaypoint] - Pos()).MagnitudeSqr() < EPSILON)
-		mCurrentWaypoint++;
 	
 	if(mCurrentWaypoint < sPaths[mCurrentPath].size()) {
 		
 		Vector2 dist = sPaths[mCurrentPath][mCurrentWaypoint] - Pos();
 		Translate(dist.Normalized() * mTimer->DeltaTime() * mSpeed, world);
 		
+		Rotation(atan2(dist.y, dist.x) * RAD_TO_DEG + 90.0f);
+
 		
-			Rotation(atan2(dist.y, dist.x) * RAD_TO_DEG + 90.0f);
+		if((sPaths[mCurrentPath][mCurrentWaypoint] - Pos()).MagnitudeSqr() < EPSILON)
+			mCurrentWaypoint++;
+		
+		if(mCurrentWaypoint >= sPaths[mCurrentPath].size())
+			PathComplete();
 		
 	} else {
 		
-		mCurrentState = formation;
+		Vector2 dist = FlyInTargetPosition() - Pos();
+		Translate (dist.Normalized() * mTimer->DeltaTime() * mSpeed, world);
+		
+		Rotation(atan2(dist.y, dist.x) * RAD_TO_DEG + 90.0f);
+		
+
+		if(dist.MagnitudeSqr() < EPSILON)
+			FlyInComplete();
 	}
 	
 }
@@ -76,21 +117,7 @@ void Enemy::HandleFlyInState() {
 
 void Enemy::HandleFormationState() {
 	
-	
-	
-	
-	
-}
-
-
-void Enemy::HandleDiveState() {
-	
-	
-	
-}
-
-
-void Enemy::HandleDeadState() {
+	Pos(FormationPosition());
 	
 	
 	
@@ -127,10 +154,15 @@ void Enemy::HandleStates() {
 }
 
 
+Enemy::STATES Enemy::CurrentState() {
+	
+	return mCurrentState;
+}
+
 void Enemy::Update() {
 	
-if(Active())
-	HandleStates();
+	if(Active())
+		HandleStates();
 	
 }
 
@@ -140,10 +172,6 @@ void Enemy::Render() {
 		
 		mTexture->Render();
 		
-		for(int i = 0; i < sPaths[mCurrentPath].size() - 1; i++) {
-			
-			Graphics::Instance()->DrawLine(sPaths[mCurrentPath][i].x, sPaths[mCurrentPath][i].y, sPaths[mCurrentPath][i + 1].x, sPaths[mCurrentPath][i + 1].y);
-		}
 	}
 	
 }
