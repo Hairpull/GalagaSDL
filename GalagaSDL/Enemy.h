@@ -20,7 +20,7 @@ protected:
 	
 	Timer* mTimer;
 	
-	Texture* mTexture;
+	Texture* mTextures[2];
 	
 	STATES mCurrentState;
 	
@@ -28,7 +28,7 @@ protected:
 	
 	int mCurrentWaypoint;
 	
-		// Ather has his EPSILON set to 5.0f, but my enemies jitter like crazy with a setting below 15.0f. Not sure why, but this is a difference between our source files.
+		// Ather has his EPSILON set to 5.0f, but my enemies jitter like crazy with a setting below 15.0f. Not sure why, but this is a difference between our source files. I think it has something to do with his enemy image size. I can't find  spot where he mentions the size explicitly.
 	const float EPSILON = 15.0f;
 	
 	float mSpeed;

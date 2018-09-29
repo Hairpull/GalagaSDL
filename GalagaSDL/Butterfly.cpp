@@ -9,9 +9,13 @@ Butterfly::Butterfly(int index, int path, bool challengeStage)
 		mTargetPosition = FormationPosition();
 	}
 	
-	mTexture = new Texture("butterfly.png");
-	mTexture->Parent(this);
-	mTexture->Pos(VEC2_ZERO);
+	mTextures[0] = new Texture("butterfly1.png");
+	mTextures[0]->Parent(this);
+	mTextures[0]->Pos(VEC2_ZERO);
+	
+	mTextures[1] = new Texture("butterfly2.png");
+	mTextures[1]->Parent(this);
+	mTextures[1]->Pos(VEC2_ZERO);
 	
 }
 

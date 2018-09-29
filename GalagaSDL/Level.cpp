@@ -193,7 +193,7 @@ void Level::HandleEnemySpawning() {
 }
 
 
-void Level::HandleEnemyFormation() {
+void Level::HandleEnemyFormation() { 
 	
 	
 	mFormation->Update();

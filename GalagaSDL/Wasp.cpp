@@ -12,10 +12,14 @@ Wasp::Wasp(int index, int path, bool challengeStage, bool diver)
 	
 	mDiver = diver;
 	
-	mTexture = new Texture("wasp.png");
-	mTexture->Parent(this);
-	mTexture->Pos(VEC2_ZERO);
+	mTextures[0] = new Texture("wasp1.png");
+	mTextures[0]->Parent(this);
+	mTextures[0]->Pos(VEC2_ZERO);
 
+	mTextures[1] = new Texture("wasp2.png");
+	mTextures[1]->Parent(this);
+	mTextures[1]->Pos(VEC2_ZERO);
+	
 }
 
 Wasp::~Wasp() {

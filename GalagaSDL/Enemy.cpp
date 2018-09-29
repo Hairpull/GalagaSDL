@@ -42,7 +42,8 @@ Enemy::Enemy(int index, int path, bool challengeStage) {
 	Pos(sPaths[mCurrentPath][0]);
 	
 	
-	mTexture = NULL;
+	mTextures[0] = NULL;
+	mTextures[1] = NULL;
 	
 	mSpeed = 400.0f;
 	
@@ -56,8 +57,13 @@ Enemy::~Enemy() {
 	
 	mTimer = NULL;
 	
-	delete mTexture;
-	mTexture = NULL;
+	for(int i = 0; i < 2; i++) {
+	
+		delete mTextures[i];
+		mTextures[i] = NULL;
+		
+	}
+	
 }
 
 void Enemy::PathComplete() {
@@ -170,7 +176,10 @@ void Enemy::Render() {
 	
 	if(Active()) {
 		
-		mTexture->Render();
+		if(mCurrentState == formation)
+			mTextures[sFormation->GetTick() % 2]->Render();
+		else
+			mTextures[0]->Render();
 		
 	}
 	

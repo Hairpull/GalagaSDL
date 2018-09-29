@@ -6,9 +6,13 @@ Boss::Boss(int index, int path, bool ChallengeStage)
 	if(!ChallengeStage)
 		mTargetPosition = FormationPosition();
 	
-	mTexture = new Texture("boss.png");
-	mTexture->Parent(this);
-	mTexture->Pos(VEC2_ZERO);
+	mTextures[0] = new Texture("boss1.png");
+	mTextures[0]->Parent(this);
+	mTextures[0]->Pos(VEC2_ZERO);
+	
+	mTextures[1] = new Texture("boss2.png");
+	mTextures[1]->Parent(this);
+	mTextures[1]->Pos(VEC2_ZERO);
 	
 }
 
