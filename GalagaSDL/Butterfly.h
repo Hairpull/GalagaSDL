@@ -8,13 +8,14 @@ class Butterfly : public Enemy {
 private:
 	
 
-	Vector2 FormationPosition();
+	Vector2 LocalFormationPosition();
 	
 	void HandleDiveState();
 	void HandleDeadState();
 	
 	
-	
+	void RenderDiveState();
+	void RenderDeadState();
 
 public:
 	

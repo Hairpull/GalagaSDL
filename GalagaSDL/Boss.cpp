@@ -3,8 +3,6 @@
 Boss::Boss(int index, int path, bool ChallengeStage)
 	: Enemy(index, path, ChallengeStage)
 {
-	if(!ChallengeStage)
-		mTargetPosition = FormationPosition();
 	
 	mTextures[0] = new Texture("boss1.png");
 	mTextures[0]->Parent(this);
@@ -14,6 +12,8 @@ Boss::Boss(int index, int path, bool ChallengeStage)
 	mTextures[1]->Parent(this);
 	mTextures[1]->Pos(VEC2_ZERO);
 	
+	
+	mType = boss;
 }
 
 Boss::~Boss() {
@@ -22,7 +22,7 @@ Boss::~Boss() {
 	
 }
 
-Vector2 Boss::FormationPosition() {
+Vector2 Boss::LocalFormationPosition() {
 	
 	Vector2 retVal;
 	
@@ -40,6 +40,17 @@ void Boss::HandleDiveState() {
 }
 
 void Boss::HandleDeadState() {
+	
+	
+	
+}
+
+void Boss::RenderDiveState() {
+	
+	
+}
+
+void Boss::RenderDeadState() {
 	
 	
 	

@@ -5,25 +5,33 @@
 class Wasp : public Enemy {
 	
 private:
+	
+	static std::vector<std::vector<Vector2>> sDivePaths;
+	
 	bool mDiver;
 	
 	
 	
 private:
 	
-	Vector2 FlyInTargetPosition();
-	
 	
 	void PathComplete();
 	void FlyInComplete();
 	
-	Vector2 FormationPosition();
+	Vector2 LocalFormationPosition();
 	
 	void HandleDiveState();
 	void HandleDeadState();
 	
+	void RenderDiveState();
+	void RenderDeadState();
+	
+	
 	
 public:
+	
+	static void CreateDivePaths();
+	
 	
 	Wasp(int index, int path, bool challengeStage, bool diver);
 	~Wasp();

@@ -216,6 +216,30 @@ void Level::HandleEnemyFormation() {
 } 
 
 
+void Level::HandleEnemyDiving() {
+	
+	if(mFormation->Locked()) {
+		
+		
+		if(InputManager::Instance()->KeyPressed(SDL_SCANCODE_V)) {
+			
+			for (int i = (int)mEnemies.size() - 1; i >= 0; i-- ) {
+				
+				if(mEnemies[i]->Type() == Enemy::wasp && mEnemies[i]->CurrentState() == Enemy::formation) {
+					
+					
+					mEnemies[i]->Dive();
+					break;
+				}
+			}
+		}
+	}
+
+	
+	
+}
+
+
 Level::LEVEL_STATES Level::State() {
 	
 	return mCurrentState;
@@ -231,6 +255,7 @@ void Level::Update() {
 		
 		HandleEnemySpawning();
 		HandleEnemyFormation();
+		HandleEnemyDiving();
 		
 		for (int i = 0; i < mEnemies.size(); i++ )
 			mEnemies[i]->Update();

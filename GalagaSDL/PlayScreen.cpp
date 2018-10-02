@@ -24,6 +24,7 @@ PlayScreen::PlayScreen() {
 	mPlayer = NULL;
 	
 	Enemy::CreatePaths();
+	Wasp::CreateDivePaths();
 	
 }
 

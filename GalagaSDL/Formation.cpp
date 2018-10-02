@@ -50,6 +50,11 @@ void Formation::Lock() {
 	mLocked = true;
 }
 
+bool Formation::Locked() {
+	
+	return mLocked && mOffsetCounter == 4;
+}
+
 
 void Formation::Update() {
 	

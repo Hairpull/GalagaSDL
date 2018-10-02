@@ -41,6 +41,8 @@ public:
 	
 	void Lock();
 	
+	bool Locked();
+	
 	void Update();
 	
 	
